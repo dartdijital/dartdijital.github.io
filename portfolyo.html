@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolyo - Dart Dijital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Üst Menü -->
+    <div class="ustMenu">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Dart Dijital Logo" class="logoResim">
+            </a>
+        </div>
+        <nav class="yatayMenu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                <li><a href="portfolyo.html">Portfolyo</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="portfolyoSayfasi">
+        <!-- Slider Bölümü -->
+        <div class="sliderBolumu">
+            <h2>Projelerimizden Örnekler</h2>
+            <div class="slider">
+                <div class="sliderResim goster">
+                    <img src="images/proje1.jpg" alt="E-ticaret Projesi">
+                    <div class="resimAciklama">E-ticaret Web Sitesi Projesi</div>
+                </div>
+                <div class="sliderResim">
+                    <img src="images/proje2.jpg" alt="Sosyal Medya Kampanyası">
+                    <div class="resimAciklama">Başarılı Sosyal Medya Kampanyası</div>
+                </div>
+                <div class="sliderResim">
+                    <img src="images/proje3.jpg" alt="Kurumsal Kimlik">
+                    <div class="resimAciklama">Kurumsal Kimlik Tasarımı</div>
+                </div>
+                <button class="sliderBtn onceki">&#10094;</button>
+                <button class="sliderBtn sonraki">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Video Bölümü -->
+        <div class="videoBolumu">
+            <h2>Tanıtım Videomuz</h2>
+            <div class="videoContainer">
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/qe4Bq2Sku-I"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="altBolum">
+        <div class="altBolumIcerik">
+            <div class="altBolumKutu">
+                <h3>Hakkımızda</h3>
+                <p>Dart Dijital, dijital dünyada markanızı güçlendirmek için yanınızda. Profesyonel ekibimizle modern çözümler sunuyoruz.</p>
+            </div>
+            
+            <div class="altBolumKutu">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                    <li><a href="portfolyo.html">Portfolyo</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="altBolumKutu">
+                <h3>İletişim</h3>
+                <ul>
+                    <li><span class="telikon"></span>0507 128 39 09</li>
+                    <li><span class="mailikon"></span>samil.lacin@dartdijital.com</li>
+                    <li><span class="konumikon"></span>İstanbul, Türkiye</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="altBolumAlt">
+            <p>&copy; 2024 Dart Dijital. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("sliderResim");
+        const oncekiBtn = document.querySelector(".onceki");
+        const sonrakiBtn = document.querySelector(".sonraki");
+
+        // Slider kontrolleri
+        function sliderGoster(n) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("goster");
+            }
+            slideIndex = (n + slides.length) % slides.length;
+            slides[slideIndex].classList.add("goster");
+        }
+
+        oncekiBtn.addEventListener("click", () => sliderGoster(slideIndex - 1));
+        sonrakiBtn.addEventListener("click", () => sliderGoster(slideIndex + 1));
+
+        // Otomatik geçiş
+        setInterval(() => sliderGoster(slideIndex + 1), 5000);
+    </script>
+</body>
+</html> 

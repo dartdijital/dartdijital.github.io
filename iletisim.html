@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Dart Dijital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Üst Menü -->
+    <div class="ustMenu">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Dart Dijital Logo" class="logoResim">
+            </a>
+        </div>
+        <nav class="yatayMenu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                <li><a href="portfolyo.html">Portfolyo</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="iletisimSayfasi">
+        <div class="iletisimBilgileri">
+            <h2>İletişim Bilgilerimiz</h2>
+            <table class="iletisimTablosu">
+                <tr>
+                    <th>Ofis</th>
+                    <th>Telefon</th>
+                    <th>E-posta</th>
+                </tr>
+                <tr>
+                    <td>İstanbul Merkez</td>
+                    <td>0507 128 39 09</td>
+                    <td><a href="samil.lacin@dartdijital.com">info@dartdijital.com</a></td>
+                </tr>
+                <tr>
+                    <td>Ankara Şube</td>
+                    <td>0312 444 44 44</td>
+                    <td><a href="mailto:ankara@dartdijital.com">ankara@dartdijital.com</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="iletisimFormu">
+            <h2>İletişim Formu</h2>
+            <form action="#" method="POST">
+                <div class="formGrup">
+                    <label for="ad">Adınız Soyadınız:</label>
+                    <input type="text" id="ad" name="ad" required>
+                </div>
+
+                <div class="formGrup">
+                    <label for="eposta">E-posta Adresiniz:</label>
+                    <input type="email" id="eposta" name="eposta" required>
+                </div>
+
+                <div class="formGrup">
+                    <label for="sifre">Şifre:</label>
+                    <input type="password" id="sifre" name="sifre">
+                </div>
+
+                <div class="formGrup">
+                    <label>Hizmet Türü:</label>
+                    <select name="hizmet" id="hizmet">
+                        <option value="">Seçiniz</option>
+                        <option value="sosyalMedya">Sosyal Medya Yönetimi</option>
+                        <option value="webTasarim">Web Tasarım</option>
+                        <option value="seo">SEO</option>
+                    </select>
+                </div>
+
+                <div class="formGrup">
+                    <label>İletişim Tercihi:</label>
+                    <div class="radioGrup">
+                        <input type="radio" id="telefon" name="iletisimTercihi" value="telefon">
+                        <label for="telefon">Telefon</label>
+                        <input type="radio" id="mail" name="iletisimTercihi" value="mail">
+                        <label for="mail">E-posta</label>
+                    </div>
+                </div>
+
+                <div class="formGrup">
+                    <label>İlgilendiğiniz Ek Hizmetler:</label>
+                    <div class="checkboxGrup">
+                        <input type="checkbox" id="danismanlik" name="ekHizmetler[]" value="danismanlik">
+                        <label for="danismanlik">Dijital Danışmanlık</label>
+                        <input type="checkbox" id="egitim" name="ekHizmetler[]" value="egitim">
+                        <label for="egitim">Eğitim</label>
+                    </div>
+                </div>
+
+                <div class="formGrup">
+                    <label for="mesaj">Mesajınız:</label>
+                    <textarea id="mesaj" name="mesaj" rows="5"></textarea>
+                </div>
+
+                <div class="formGrup">
+                    <button type="reset" class="btnSifirla">Formu Temizle</button>
+                    <button type="submit" class="btnGonder">Gönder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="altBolum">
+        <div class="altBolumIcerik">
+            <div class="altBolumKutu">
+                <h3>Hakkımızda</h3>
+                <p>Dart Dijital, dijital dünyada markanızı güçlendirmek için yanınızda. Profesyonel ekibimizle modern çözümler sunuyoruz.</p>
+            </div>
+            
+            <div class="altBolumKutu">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                    <li><a href="portfolyo.html">Portfolyo</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="altBolumKutu">
+                <h3>İletişim</h3>
+                <ul>
+                    <li><span class="telikon"></span>0507 128 39 09</li>
+                    <li><span class="mailikon"></span>samil.lacin@dartdijital.com</li>
+                    <li><span class="konumikon"></span>İstanbul, Türkiye</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="altBolumAlt">
+            <p>&copy; 2024 Dart Dijital. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html> 
