@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Dijital - Medya Ajansı</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Sayfa başlığı ve meta etiketleri -->
+</head>
+<body>
+    <!-- Üst Menü -->
+    <div class="ustMenu">
+        <div class="simge">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Dart Dijital Simge" class="simgeResim">
+            </a>
+        </div>
+        <nav class="yatayMenu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                <li><a href="portfolyo.html">Portfolyo</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="anaIcerik">
+        <!-- Slider Bölümü -->
+        <div class="kaydirmaBolumu">
+            <div class="kaydirici">
+                <div class="kaydiriciResim goster">
+                    <img src="images/slider1.jpg" alt="Dijital Pazarlama">
+                    <div class="resimAciklama">360° Dijital Pazarlama Çözümleri</div>
+                </div>
+                <div class="kaydiriciResim">
+                    <img src="images/slider2.jpg" alt="Web Tasarım">
+                    <div class="resimAciklama">Modern Web Tasarım Hizmetleri</div>
+                </div>
+                <div class="kaydiriciResim">
+                    <img src="images/slider3.jpg" alt="Kreatif Ajans">
+                    <div class="resimAciklama">Kreatif Medya Çözümleri</div>
+                </div>
+                <button class="kaydiriciDugme onceki">&#10094;</button>
+                <button class="kaydiriciDugme sonraki">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Hizmetler Özeti -->
+        <div class="hizmetlerOzet">
+            <h2>Hizmetlerimiz</h2>
+            <div class="hizmetKutusu">
+                <h3>Sosyal Medya Yönetimi</h3>
+                <p>Profesyonel sosyal medya yönetimi ile markanızı büyütün.</p>
+            </div>
+            <div class="hizmetKutusu">
+                <h3>Web Tasarım</h3>
+                <p>Modern ve responsive web tasarımları ile online varlığınızı güçlendirin.</p>
+            </div>
+            <div class="hizmetKutusu">
+                <h3>Dijital Pazarlama</h3>
+                <p>Etkili dijital pazarlama stratejileri ile hedef kitlenize ulaşın.</p>
+            </div>
+        </div>
+
+        <!-- Yeni Eklenen Bölüm: Çalışma Adımları (Sıralı Liste ve ID Seçici için) -->
+        <div id="calismaAdimlari" style="background-color: #f8f9fa; padding: 30px; margin-top: 40px; border-radius: 10px;">
+            <h2 style="color: #2c3e50; text-align: center;">Çalışma Adımlarımız</h2>
+            <ol class="adimlarListesi">
+                <li>Müşteri ile ilk görüşme ve ihtiyaç analizi</li>
+                <li>Proje planının hazırlanması</li>
+                <li>Tasarım ve geliştirme süreci</li>
+                <li>Test ve kontrol aşaması</li>
+                <li>Projenin teslimi ve destek süreci</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="altBolum">
+        <div class="altBolumIcerik">
+            <div class="altBolumKutusu">
+                <h3>Hakkımızda</h3>
+                <p>Dart Dijital, dijital dünyada markanızı güçlendirmek için yanınızda. Profesyonel ekibimizle modern çözümler sunuyoruz.</p>
+            </div>
+            
+            <div class="altBolumKutusu">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                    <li><a href="portfolyo.html">Portfolyo</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="altBolumKutusu">
+                <h3>İletişim</h3>
+                <ul>
+                    <li><span class="telikon"></span>0507 128 39 09</li>
+                    <li><span class="mailikon"></span>samil.lacin@dartdijital.com</li>
+                    <li><span class="konumikon"></span>İstanbul, Türkiye</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="altBolumAlt">
+            <p>&copy; 2024 Dart Dijital. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Kaydırıcı değişkenleri
+        let kaydirmaIndeks = 0;
+        const kaydirmalar = document.getElementsByClassName("kaydiriciResim");
+        const oncekiBtn = document.querySelector(".onceki");
+        const sonrakiBtn = document.querySelector(".sonraki");
+
+        // Kaydırıcı kontrolleri
+        function kaydiriciGoster(n) {
+            for (let i = 0; i < kaydirmalar.length; i++) {
+                kaydirmalar[i].classList.remove("goster");
+            }
+            kaydirmaIndeks = (n + kaydirmalar.length) % kaydirmalar.length;
+            kaydirmalar[kaydirmaIndeks].classList.add("goster");
+        }
+
+        // Düğme olayları
+        oncekiBtn.addEventListener("click", () => kaydiriciGoster(kaydirmaIndeks - 1));
+        sonrakiBtn.addEventListener("click", () => kaydiriciGoster(kaydirmaIndeks + 1));
+
+        // Otomatik geçiş
+        setInterval(() => kaydiriciGoster(kaydirmaIndeks + 1), 5000);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolyo - Dart Dijital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Üst Menü -->
+    <div class="ustMenu">
+        <div class="simge">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Dart Dijital Simge" class="simgeResim">
+            </a>
+        </div>
+        <nav class="yatayMenu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                <li><a href="portfolyo.html">Portfolyo</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="portfolyoSayfasi">
+        <!-- Slider Bölümü -->
+        <div class="kaydirmaBolumu">
+            <h2>Projelerimizden Örnekler</h2>
+            <div class="kaydirici">
+                <div class="kaydiriciResim goster">
+                    <img src="images/proje1.jpg" alt="E-ticaret Projesi">
+                    <div class="resimAciklama">E-ticaret Web Sitesi Projesi</div>
+                </div>
+                <div class="kaydiriciResim">
+                    <img src="images/proje2.jpg" alt="Sosyal Medya Kampanyası">
+                    <div class="resimAciklama">Başarılı Sosyal Medya Kampanyası</div>
+                </div>
+                <div class="kaydiriciResim">
+                    <img src="images/proje3.jpg" alt="Kurumsal Kimlik">
+                    <div class="resimAciklama">Kurumsal Kimlik Tasarımı</div>
+                </div>
+                <button class="kaydiriciDugme onceki">&#10094;</button>
+                <button class="kaydiriciDugme sonraki">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Video Bölümü -->
+        <div class="videoBolumu">
+            <h2>Tanıtım Videomuz</h2>
+            <div class="videoKutusu">
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/qe4Bq2Sku-I"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="altBolum">
+        <div class="altBolumIcerik">
+            <div class="altBolumKutusu">
+                <h3>Hakkımızda</h3>
+                <p>Dart Dijital, dijital dünyada markanızı güçlendirmek için yanınızda. Profesyonel ekibimizle modern çözümler sunuyoruz.</p>
+            </div>
+            
+            <div class="altBolumKutusu">
+                <h3>Hızlı Erişim</h3>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                    <li><a href="portfolyo.html">Portfolyo</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="altBolumKutusu">
+                <h3>İletişim</h3>
+                <ul>
+                    <li><span class="telikon"></span>0507 128 39 09</li>
+                    <li><span class="mailikon"></span>samil.lacin@dartdijital.com</li>
+                    <li><span class="konumikon"></span>İstanbul, Türkiye</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="altBolumAlt">
+            <p>&copy; 2024 Dart Dijital. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Kaydırıcı değişkenleri
+        let kaydirmaIndeks = 0;
+        const kaydirmalar = document.getElementsByClassName("kaydiriciResim");
+        const oncekiBtn = document.querySelector(".onceki");
+        const sonrakiBtn = document.querySelector(".sonraki");
+
+        // Kaydırıcı kontrolleri
+        function kaydiriciGoster(n) {
+            for (let i = 0; i < kaydirmalar.length; i++) {
+                kaydirmalar[i].classList.remove("goster");
+            }
+            kaydirmaIndeks = (n + kaydirmalar.length) % kaydirmalar.length;
+            kaydirmalar[kaydirmaIndeks].classList.add("goster");
+        }
+
+        // Düğme olayları
+        oncekiBtn.addEventListener("click", () => kaydiriciGoster(kaydirmaIndeks - 1));
+        sonrakiBtn.addEventListener("click", () => kaydiriciGoster(kaydirmaIndeks + 1));
+
+        // Otomatik geçiş
+        setInterval(() => kaydiriciGoster(kaydirmaIndeks + 1), 5000);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,623 @@
+/* Genel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Üst Menü Stilleri */
+.ustMenu {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    overflow: hidden;
+    height: 70px;
+}
+
+.simge {
+    float: left;
+    padding: 5px 0;
+}
+
+.simgeResim {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.yatayMenu {
+    float: right;
+    padding-top: 15px;
+}
+
+.yatayMenu ul {
+    list-style: none;
+}
+
+.yatayMenu ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+.yatayMenu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Ana İçerik Stilleri */
+.anaIcerik {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hizmet Kutuları */
+.hizmetKutusu {
+    width: 30%;
+    float: left;
+    margin: 1.66%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Temizleyici */
+.hizmetlerOzet:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Dikey Menü Stilleri */
+.icerikAlani {
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    background-image: url('../images/hizmetler-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Ana overlay'i daha şeffaf yapalım */
+.icerikAlani:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* İçeriği overlay'in üzerine getirmek için */
+.dikeyMenu,
+.hizmetlerIcerik {
+    position: relative;
+    z-index: 1;
+}
+
+.dikeyMenu {
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+    background-color: rgba(52, 73, 94, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.dikeyMenu h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.dikeyMenu ul {
+    list-style: none;
+}
+
+.dikeyMenu ul li {
+    margin: 10px 0;
+}
+
+.dikeyMenu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    transition: background-color 0.3s;
+}
+
+.dikeyMenu ul li a:hover {
+    background-color: #2c3e50;
+    border-radius: 3px;
+}
+
+/* Hizmet Bölümleri */
+.hizmetlerIcerik {
+    float: left;
+    width: calc(100% - 270px);
+}
+
+.hizmetBolumu {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hizmetListesi {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.hizmetListesi li {
+    margin: 12px 0;
+    color: #000;
+    font-weight: 500;
+    text-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+
+/* İletişim Sayfası Stilleri */
+.iletisimSayfasi {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-image: url('../images/iletisim-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* Overlay'i daha şeffaf yapalım */
+.iletisimSayfasi:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+/* İçerik kutularını daha şeffaf yapalım */
+.iletisimBilgileri,
+.iletisimFormu {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Tablo Stilleri */
+.iletisimTablosu {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.iletisimTablosu th, 
+.iletisimTablosu td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.iletisimTablosu th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.iletisimTablosu tr:nth-child(even) {
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+.iletisimTablosu td {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Form Stilleri */
+.iletisimFormu {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.formGrubu {
+    margin-bottom: 15px;
+}
+
+.formGrubu label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formGrubu input[type="text"],
+.formGrubu input[type="email"],
+.formGrubu input[type="password"],
+.formGrubu select,
+.formGrubu textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.radyoGrubu,
+.onayKutusu {
+    margin-top: 5px;
+}
+
+.radyoGrubu label,
+.onayKutusu label {
+    display: inline;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.dugmeGonder,
+.dugmeSifirla {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dugmeGonder {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.dugmeSifirla {
+    background-color: #95a5a6;
+    color: white;
+}
+
+/* Portfolyo Sayfası Stilleri */
+.portfolyoSayfasi {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Slider Stilleri */
+.kaydirmaBolumu {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.kaydirici {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Slider yüksekliği */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.kaydiriciResim {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.kaydiriciResim.goster {
+    display: block;
+}
+
+.kaydiriciResim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi kırpmadan doldurur */
+}
+
+.resimAciklama {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.kaydiriciDugme {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+.kaydiriciDugme:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.onceki {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.sonraki {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Video Bölümü Stilleri */
+.videoKutusu {
+    margin-top: 40px;
+}
+
+.videoKutusu {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 oranı */
+    height: 0;
+}
+
+.videoKutusu iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hakkımızda Sayfası Stilleri */
+.hakkimizdaSayfasi {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.hakkimizdaBaslik {
+    background-image: url('../images/hakkimizda-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.hakkimizdaBaslik h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hakkimizdaIcerik {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tanitimBolumu h2,
+.belgelerBolumu h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.degerlerListesi,
+.belgelerListesi {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.degerlerListesi li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+    padding-left: 20px;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.degerlerListesi li b,
+.degerlerListesi li i,
+.degerlerListesi li u {
+    color: #2c3e50;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.degerlerListesi li b:after,
+.degerlerListesi li i:after,
+.degerlerListesi li u:after {
+    content: ":";
+    margin-right: 5px;
+}
+
+.belgelerListesi li a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.belgelerListesi li a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Çalışma Adımları Listesi Stili */
+.adimlarListesi {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.adimlarListesi li {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#calismaAdimlari {
+    margin-bottom: 40px;
+}
+
+/* Hakkımızda Sayfası Metin Stilleri */
+.tanitimMetni {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tanitimBolumu h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 30px 0 20px 0;
+}
+
+.tanitimBolumu h3 {
+    font-size: 22px;
+    color: #34495e;
+    margin: 25px 0 15px 0;
+}
+
+.degerlerListesi li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.degerlerListesi li b,
+.degerlerListesi li i,
+.degerlerListesi li u {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.belgelerBolumu {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.belgelerBolumu h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.belgelerListesi li {
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.belgelerListesi li a {
+    font-weight: 500;
+}
+
+.dugmeGonder:hover {
+    background-color: #34495e;
+}
+
+/* Footer Stilleri */
+.altBolum {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.altBolumIcerik {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.altBolumKutusu {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+
+.altBolumKutusu:last-child {
+    margin-right: 0;
+}
+
+.altBolumKutusu h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.altBolumKutusu p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.altBolumKutusu ul {
+    list-style: none;
+}
+
+.altBolumKutusu ul li {
+    margin: 10px 0;
+}
+
+.altBolumKutusu ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.altBolumKutusu ul li a:hover {
+    color: #3498db;
+}
+
+.telikon, .mailikon, .konumikon {
+    margin-right: 10px;
+}
+
+.telikon:before { content: "📞"; }
+.mailikon:before { content: "✉️"; }
+.konumikon:before { content: "📍"; }
+
+.altBolumAlt {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.altBolumIcerik {
+    overflow: hidden; /* temizleyici için */
+} 
