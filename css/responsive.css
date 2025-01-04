@@ -1,0 +1,132 @@
+/* Tablet ve Küçük Ekranlar (1024px ve altı) */
+@media screen and (max-width: 1024px) {
+    .anaIcerik,
+    .iletisimSayfasi,
+    .portfolyoSayfasi,
+    .hakkimizdaSayfasi {
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .hizmetKutu {
+        width: 45%;
+        margin: 2.5%;
+    }
+
+    .slider {
+        height: 400px;
+    }
+
+    .icerikAlani {
+        flex-direction: column;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .dikeyMenu {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .yatayMenu ul li {
+        margin-left: 10px;
+    }
+
+    .altBolumIcerik {
+        width: 95%;
+        padding: 0 20px;
+    }
+}
+
+/* Mobil Cihazlar (768px ve altı) */
+@media screen and (max-width: 768px) {
+    .ustMenu {
+        padding: 10px;
+        height: auto;
+        text-align: center;
+    }
+
+    .logo,
+    .yatayMenu {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .yatayMenu {
+        margin-top: 10px;
+    }
+
+    .yatayMenu ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .yatayMenu ul li {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hizmetKutu {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .iletisimTablosu {
+        font-size: 14px;
+    }
+
+    .iletisimTablosu th, 
+    .iletisimTablosu td {
+        padding: 8px;
+    }
+
+    .formGrup input[type="text"],
+    .formGrup input[type="email"],
+    .formGrup input[type="password"],
+    .formGrup select,
+    .formGrup textarea {
+        width: 100%;
+    }
+
+    /* Footer mobil düzenlemesi */
+    .altBolumIcerik {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .altBolumKutu {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .altBolumKutu:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Video container düzeltmesi */
+    .videoContainer {
+        margin: 0 auto;
+    }
+
+    /* Hizmetler sayfası düzeltmesi */
+    .hizmetlerIcerik {
+        padding: 0 15px;
+    }
+
+    /* Hakkımızda sayfası düzeltmesi */
+    .hakkimizdaBaslik {
+        padding: 50px 15px;
+    }
+
+    .hakkimizdaIcerik {
+        padding: 20px 15px;
+    }
+} 
