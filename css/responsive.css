@@ -1,0 +1,223 @@
+/* Tablet ve Küçük Ekranlar (1024px ve altı) */
+@media screen and (max-width: 1024px) {
+    .anaIcerik,
+    .iletisimSayfasi,
+    .portfolyoSayfasi,
+    .hakkimizdaSayfasi {
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .hizmetKutusu {
+        width: 45%;
+        margin: 2.5%;
+    }
+
+    .kaydirici {
+        height: 400px;
+    }
+
+    .icerikAlani {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .dikeyMenu {
+        width: 100%;
+        margin-bottom: 20px;
+        float: none;
+    }
+
+    .yatayMenu ul li {
+        margin-left: 10px;
+    }
+
+    .altBolumIcerik {
+        width: 95%;
+        padding: 0 20px;
+    }
+}
+
+/* Mobil Cihazlar (768px ve altı) */
+@media screen and (max-width: 768px) {
+    .ustMenu {
+        height: auto;
+        padding: 10px;
+    }
+
+    .simge {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .simgeResim {
+        margin: 0 auto;
+    }
+
+    .yatayMenu {
+        float: none;
+        text-align: center;
+    }
+
+    .yatayMenu ul li {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hizmetKutusu {
+        width: 100%;
+        margin: 20px 0;
+        float: none;
+    }
+
+    .formGrubu input[type="text"],
+    .formGrubu input[type="tel"],
+    .formGrubu input[type="email"],
+    .formGrubu input[type="password"],
+    .formGrubu select,
+    .formGrubu textarea {
+        width: 100%;
+    }
+
+    /* Footer mobil düzenlemesi */
+    .altBolumIcerik {
+        text-align: center;
+    }
+
+    .altBolumKutusu {
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+    }
+
+    .altBolumKutusu:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Video kutusu düzeltmesi */
+    .videoKutusu {
+        margin: 0 auto;
+    }
+
+    /* Hizmetler sayfası düzeltmesi */
+    .hizmetlerIcerik {
+        padding: 0 15px;
+    }
+
+    /* Hakkımızda sayfası düzeltmesi */
+    .hakkimizdaBaslik {
+        padding: 50px 15px;
+    }
+
+    .hakkimizdaIcerik {
+        padding: 20px 15px;
+    }
+
+    /* İletişim sayfası mobil düzenlemeleri */
+    .iletisimSayfasi {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .iletisimBilgileri,
+    .iletisimFormu {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .iletisimTablosu {
+        width: 100%;
+        font-size: 14px; /* Yazı boyutunu küçült */
+    }
+
+    .iletisimTablosu th, 
+    .iletisimTablosu td {
+        padding: 8px;
+        text-align: center;
+    }
+
+    /* Form elemanlarını düzenle */
+    .formGrubu,
+    .radyoGrubu,
+    .onayKutusu {
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    /* Butonları düzenle */
+    .dugmeGonder,
+    .dugmeSifirla {
+        width: 100%;
+        margin: 5px 0;
+        padding: 12px 0;
+    }
+
+    /* Sayfa yüksekliğini düzelt */
+    .iletisimSayfasi:before {
+        min-height: 100vh;
+    }
+
+    /* Hizmetler sayfası mobil düzenlemeleri */
+    .icerikAlani {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .dikeyMenu {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .hizmetlerIcerik {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+
+    .hizmetBolumu {
+        width: 95%;
+        margin: 10px auto 20px auto;
+        background-color: rgba(255, 255, 255, 0.95); /* Arka plan opaklığını artır */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* Gölgeyi belirginleştir */
+    }
+
+    .hizmetListesi {
+        margin: 10px 0 10px 20px;
+    }
+
+    .hizmetListesi li {
+        background-color: rgba(255, 255, 255, 0.8); /* Liste maddelerine yarı saydam arka plan */
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+}
+
+/* Daha küçük mobil cihazlar için ek düzenlemeler */
+@media screen and (max-width: 480px) {
+    .iletisimTablosu {
+        font-size: 12px; /* Daha da küçük yazı */
+    }
+
+    .iletisimBilgileri,
+    .iletisimFormu {
+        padding: 10px;
+    }
+}
+
+/* Video kutusu düzeltmesi */
+.videoKutusu {
+    margin: 0 auto;
+}
+
+/* Kaplama düzeltmesi */
+.iletisimSayfasi:before {
+    background-color: rgba(255, 255, 255, 0.5);
+} 
